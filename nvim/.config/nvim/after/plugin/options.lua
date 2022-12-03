@@ -6,7 +6,7 @@ opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
--- opt.number = true
+opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.termguicolors = true -- Enable colors in terminal
@@ -35,7 +35,7 @@ g.netrw_liststyle = 3 -- Tree-style view
 
 g.mapleader = " "
 g.maplocalleader = " "
-    
+
 vim.cmd [[
     augroup highlight_yank
         autocmd!

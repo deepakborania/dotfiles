@@ -70,6 +70,12 @@ function M.setup()
       end,
     }
 
+    use {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = function() require("nvim-autopairs").setup {} end
+    }
+
     use { 
       "nvim-telescope/telescope.nvim" , tag = "0.1.0",
       requires = 'nvim-lua/plenary.nvim',
