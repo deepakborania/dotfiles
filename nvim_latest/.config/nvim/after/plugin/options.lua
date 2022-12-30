@@ -1,3 +1,5 @@
+local map = require("utils").map
+
 local api = vim.api
 local g = vim.g
 local opt = vim.opt
@@ -35,6 +37,9 @@ g.netrw_liststyle = 3 -- Tree-style view
 
 g.mapleader = " "
 g.maplocalleader = " "
+
+map("n", "<C-u>", "<C-u>zz", { silent = true })
+map("n", "<C-d>", "<C-d>zz", { silent = true })
 
 vim.cmd [[
     augroup highlight_yank

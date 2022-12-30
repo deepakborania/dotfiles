@@ -1,2 +1,2 @@
-nvim/.config/nvim/undo/
-nvim/.config/nvim/plugin
+undo/
+packer_compiled.lua
