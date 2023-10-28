@@ -28,7 +28,32 @@ return{
         },
     },
 
-    { "lukas-reineke/indent-blankline.nvim", opts = { char = "┊" }},
+    {
+      "lukas-reineke/indent-blankline.nvim",
+      event = "LazyFile",
+      opts = {
+        indent = {
+          char = "┊",
+          tab_char = "┊",
+        },
+        scope = { enabled = false },
+        exclude = {
+          filetypes = {
+            "help",
+            "alpha",
+            "dashboard",
+            "neo-tree",
+            "Trouble",
+            "lazy",
+            "mason",
+            "notify",
+            "toggleterm",
+            "lazyterm",
+          },
+        },
+      },
+      main = "ibl",
+    },
     { "echasnovski/mini.indentscope", opts = { symbol = "┊", } },
     {
         "zbirenbaum/copilot.lua",
@@ -60,4 +85,15 @@ return{
           require("nvim-surround").setup({})
       end
     },
+    -- Fix clangd offset encoding
+    {
+      "neovim/nvim-lspconfig",
+      opts = {
+        setup = {
+          clangd = function(_, opts)
+            opts.capabilities.offsetEncoding = { "utf-16" }
+          end,
+        },
+      },
+    }
 }

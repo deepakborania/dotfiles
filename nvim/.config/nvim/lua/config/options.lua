@@ -7,3 +7,4 @@ local opt = vim.opt
 vim.g.copilot_assume_mapped = true
 -- opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.clipboard = "" -- Don't Sync with system clipboard
+opt.tabstop = 4
