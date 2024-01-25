@@ -1,7 +1,9 @@
 return {
     "stevearc/conform.nvim",
     opts = {
-        formatters_by_ft = {},
+        formatters_by_ft = {
+            go = { "goimports" },
+        },
         formatters = {
             -- # Example of using dprint only when a dprint.json file is present
             -- dprint = {

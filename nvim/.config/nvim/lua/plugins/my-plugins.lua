@@ -55,15 +55,15 @@ return{
       main = "ibl",
     },
     { "echasnovski/mini.indentscope", opts = { symbol = "┊", } },
-    {
-        "zbirenbaum/copilot.lua",
-        -- cmd = "Copilot",
-        build = ":Copilot auth",
-        opts = {
-          suggestion = { enabled = true, auto_trigger = true },
-        --   panel = { enabled = false },
-        },
-    },
+    -- {
+    --     "zbirenbaum/copilot.lua",
+    --     -- cmd = "Copilot",
+    --     build = ":Copilot auth",
+    --     opts = {
+    --       suggestion = { enabled = true, auto_trigger = true },
+    --     --   panel = { enabled = false },
+    --     },
+    -- },
     {
       'windwp/nvim-autopairs',
       event = "VeryLazy",
